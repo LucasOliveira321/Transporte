@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br"
-      xmlns:th="http://thymeleaf.org">
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="stylesheet" href="../static/css/reset.css" th:href="@{/css/reset.css}">
-    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+    <title>Menu Cadastrar</title>
 </head>
 <body>
-    <div >
-        <img th:src="@{/css/image/logo.png}" alt="Techfive">
+    <div layout:fragment="conteudo">
         <h1 class="title">CADASTRAR</h1>
-    </div>
-    <hr>
-    <div>
-        <div class="alinhamento">
-            <div class="column">
-                <img th:src="@{/css/image/cracha.png}" alt="Cadastrar Motorista" class="img"/>
-                <a href="#" type="button" class="button">Motorista</a>
+        <hr>
+        <div>
+            <div class="alinhamento">
+                <div class="column">
+                    <img th:src="@{/css/image/cracha.png}" alt="Cadastrar Motorista" class="img"/>
+                    <a href="#" type="button" class="button">Motorista</a>
+                </div>
+                <div class="column">
+                    <img th:src="@{/css/image/empresa.png}" alt="Cadastrar Empresa" class="img"/>
+                    <a th:href="@{/empresa}" type="button" class="button">Empresa</a>
+                </div>
             </div>
-            <div class="column">
-                <img th:src="@{/css/image/empresa.png}" alt="Cadastrar Empresa" class="img"/>
-                <a th:href="@{/empresa}" type="button" class="button">Empresa</a>
-            </div>
-        </div>
-        <div class="alinhamento">
-            <div class="column">
-                <img th:src="@{/css/image/registro_frota.png}" alt="Cadastrar Frota" class="img"/>
-                <a href="#" type="button" class="button">Cadastrar Frota</a>
-            </div>
-            <div class="column">
-                <img th:src="@{/css/image/transportadora.png}" alt="Cadastrar Transportadora" class="img"/>
-                <a href="#" type="button" class="button">Transportadora</a>
+            <div class="alinhamento">
+                <div class="column">
+                    <img th:src="@{/css/image/registro_frota.png}" alt="Cadastrar Frota" class="img"/>
+                    <a href="#" type="button" class="button">Frota</a>
+                </div>
+                <div class="column">
+                    <img th:src="@{/css/image/transportadora.png}" alt="Cadastrar Transportadora" class="img"/>
+                    <a href="#" type="button" class="button">Transportadora</a>
+                </div>
             </div>
         </div>
     </div>

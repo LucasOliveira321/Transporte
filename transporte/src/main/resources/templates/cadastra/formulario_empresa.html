@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br"
-    xmlns:th="http://thymeleaf.org">
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Empresa</title>
-    <link rel="stylesheet" href="../static/css/reset.css" th:href="@{/css/reset.css}">
-    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+    <title>Formulario Empresa</title>
 </head>
 <body>
+    <div layout:fragment="conteudo">
 
-    <img src="../../static/css/image/logo.png" th:src="@{/css/image/logo.png}"/>
-    <h1 class="title">Cadastro de Empresa</h1>
-    <hr>
-    <form method="post" >
-        <div class="alinhamento">
-            <label for="nome" class="container__label">Nome da empresa:</label>
-            <input id="nome" name="nome" placeholder="Empresa" class="container__input">
-        </div>
+        <h1 class="title">Cadastro de Empresa</h1>
+        <hr>
+        <form method="post" >
+            <div class="alinhamento">
+                <label for="nome" class="container__label">Nome da empresa:</label>
+                <input id="nome" name="nome" placeholder="Empresa" class="container__input">
+            </div>
 
-        <div class="alinhamento">
-            <label for="cnpj" class="container__label">CNPJ:</label>
-            <input id="cnpj" name="cnpj" placeholder="11.111.111/1111-11" class="container__input">
-        </div>
+            <div class="alinhamento">
+                <label for="cnpj" class="container__label">CNPJ:</label>
+                <input id="cnpj" name="cnpj" placeholder="11.111.111/1111-11" class="container__input">
+            </div>
 
-        <div class="alinhamento">
-            <label for="logradouro">Logradouro:</label>
-            <input id="logradouro" name="logradouro" placeholder="Rua, Avenida, Estrada ...">
-        </div>
+            <div class="alinhamento">
+                <label for="logradouro">Logradouro:</label>
+                <input id="logradouro" name="logradouro" placeholder="Rua, Avenida, Estrada ...">
+            </div>
 
-        <div class="alinhamento">
-            <label for="numero">Número:</label>
-            <input id="numero" name="numero" placeholder="111">
-        </div>
+            <div class="alinhamento">
+                <label for="numero">Número:</label>
+                <input id="numero" name="numero" placeholder="111">
+            </div>
 
-        <div class="alinhamento">
-            <label for="complemento">Complemento:</label>
-            <input id="complemento" name="complemento" placeholder="Apartamento, Casa, Comercio ...">
-        </div>
+            <div class="alinhamento">
+                <label for="complemento">Complemento:</label>
+                <input id="complemento" name="complemento" placeholder="Apartamento, Casa, Comercio ...">
+            </div>
 
-        <div class="alinhamento">
-            <label for="bairro">Bairro:</label>
-            <input id="bairro" name="bairro" placeholder="Bairro">
-        </div>
+            <div class="alinhamento">
+                <label for="bairro">Bairro:</label>
+                <input id="bairro" name="bairro" placeholder="Bairro">
+            </div>
 
-        <div class="alinhamento">
-            <label for="cidade">Cidade:</label>
-            <input id="cidade" name="cidade" placeholder="Cidade">
-        </div>
+            <div class="alinhamento">
+                <label for="cidade">Cidade:</label>
+                <input id="cidade" name="cidade" placeholder="Cidade">
+            </div>
 
-        <div class="alinhamento">
-            <label for="uf">UF:</label>
-            <input id="uf" name="uf" placeholder="SP">
-        </div>
+            <div class="alinhamento">
+                <label for="uf">UF:</label>
+                <input id="uf" name="uf" placeholder="SP">
+            </div>
 
-        <div class="alinhamento">
-            <label for="cep">CEP:</label>
-            <input id="cep" name="cep" placeholder="11111-111">
-        </div>
-        <div class="alinhamento">
-            <input type="submit" value="Cadastrar" class="button__form">
-        </div>
-    </form>
+            <div class="alinhamento">
+                <label for="cep">CEP:</label>
+                <input id="cep" name="cep" placeholder="11111-111">
+            </div>
+            <div class="alinhamento">
+                <input type="submit" value="Cadastrar" class="button__form">
+            </div>
+        </form>
+    </div>
 </body>

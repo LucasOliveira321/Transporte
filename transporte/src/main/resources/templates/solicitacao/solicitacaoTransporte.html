@@ -1,138 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br"
-      xmlns:th="http://thymeleaf.org">
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu</title>
-  <link rel="stylesheet" href="../static/css/reset.css" th:href="@{/css/reset.css}">
-  <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+    <title>Solicitacao de Coleta</title>
 </head>
 <body>
-  <div >
-    <img th:src="@{/css/image/logo.png}" alt="Techfive">
-    <h1 class="title">SOLICITAR COLETA</h1>
-  </div>
-  <hr>
-  <div class="container">
-      <a class="container__text">Tipo de atividade: </a>
-      <select class="select">
-        <option>Coleta</option>
-        <option>Entrega</option>
-      </select>
-  </div>
-  <hr>
-  <div>
-    <h2 class="title">Informações sobre o local da retirada</h2>
-    <div class="container">
-      <a class="container__text">Empresa</a>
-      <select class="select">
-        <option th:each="empresa : ${lista}"
-                th:text="${empresa.nome}"/>
-      </select>
-    </div>
-    <div class="container">
-        <a class="container__text">CNPJ</a>
-        <select class="select">
-            <option th:each="empresa : ${lista}"
-                    th:text="${empresa.cnpj}"/>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Endereço</a>
-        <select class="select">
-            <option th:each="empresa : ${lista}"
-                    th:text="${empresa.logradouro}"/>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Tipo de Material</a>
-        <select class="select">
-          <option>EQUIPAMENTOS DE INFORMATICA</option>
-          <option>EQUIPAMENTOS DE TELECOM</option>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Nome do Responsável</a>
-        <select class="select">
-          <option>FULANO</option>
-          <option>CICLANO</option>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Telefone do Responsável</a>
-        <select class="select">
-          <option>(12) 98765-4321</option>
-          <option>(12) 98765-4321</option>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Outro Contato</a>
-        <select class="select">
-          <option>FULANO</option>
-          <option>CICLANO</option>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Telefone</a>
-        <select class="select">
-          <option>(12) 98765-4321</option>
-          <option>(12) 98765-4321</option>
-        </select>
-    </div>
-  </div>
-  <hr>
-  <div>
-    <h2 class="title">Informações sobre o local da retirada</h2>
-    <div class="container">
-        <a class="container__text">Empresa</a>
-        <select class="select">
+    <div layout:fragment="conteudo">
+      <div >
+        <h1 class="title">SOLICITAR COLETA</h1>
+      </div>
+      <hr>
+      <div class="container">
+          <a class="container__text">Tipo de atividade: </a>
+          <select class="select">
+            <option>Coleta</option>
+            <option>Entrega</option>
+          </select>
+      </div>
+      <hr>
+      <div>
+        <h2 class="title">Informações sobre o local da retirada</h2>
+        <div class="container">
+          <a class="container__text">Empresa</a>
+          <select class="select">
             <option th:each="empresa : ${lista}"
                     th:text="${empresa.nome}"/>
-        </select>
+          </select>
+        </div>
+        <div class="container">
+            <a class="container__text">CNPJ</a>
+            <select class="select">
+                <option th:each="empresa : ${lista}"
+                        th:text="${empresa.cnpj}"/>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Endereço</a>
+            <select class="select">
+                <option th:each="empresa : ${lista}"
+                        th:text="${empresa.logradouro}"/>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Tipo de Material</a>
+            <select class="select">
+              <option>EQUIPAMENTOS DE INFORMATICA</option>
+              <option>EQUIPAMENTOS DE TELECOM</option>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Nome do Responsável</a>
+            <select class="select">
+              <option>FULANO</option>
+              <option>CICLANO</option>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Telefone do Responsável</a>
+            <select class="select">
+              <option>(12) 98765-4321</option>
+              <option>(12) 98765-4321</option>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Outro Contato</a>
+            <select class="select">
+              <option>FULANO</option>
+              <option>CICLANO</option>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Telefone</a>
+            <select class="select">
+              <option>(12) 98765-4321</option>
+              <option>(12) 98765-4321</option>
+            </select>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <h2 class="title">Informações sobre o local da retirada</h2>
+        <div class="container">
+            <a class="container__text">Empresa</a>
+            <select class="select">
+                <option th:each="empresa : ${lista}"
+                        th:text="${empresa.nome}"/>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">CNPJ</a>
+            <select class="select">
+                <option th:each="empresa : ${lista}"
+                        th:text="${empresa.cnpj}"/>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Endereço</a>
+            <select class="select">
+                <option th:each="empresa : ${lista}"
+                        th:text="${empresa.logradouro}"/>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Nome do Responsável</a>
+            <select class="select">
+              <option>FULANO</option>
+              <option>CICLANO</option>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Telefone do Responsável</a>
+            <select class="select">
+              <option>(12) 98765-4321</option>
+              <option>(12) 98765-4321</option>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Outro Contato</a>
+            <select class="select">
+              <option>FULANO</option>
+              <option>CICLANO</option>
+            </select>
+        </div>
+        <div class="container">
+            <a class="container__text">Telefone</a>
+            <select class="select">
+              <option>(12) 98765-4321</option>
+              <option>(12) 98765-4321</option>
+            </select>
+        </div>
+      </div>
     </div>
-    <div class="container">
-        <a class="container__text">CNPJ</a>
-        <select class="select">
-            <option th:each="empresa : ${lista}"
-                    th:text="${empresa.cnpj}"/>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Endereço</a>
-        <select class="select">
-            <option th:each="empresa : ${lista}"
-                    th:text="${empresa.logradouro}"/>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Nome do Responsável</a>
-        <select class="select">
-          <option>FULANO</option>
-          <option>CICLANO</option>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Telefone do Responsável</a>
-        <select class="select">
-          <option>(12) 98765-4321</option>
-          <option>(12) 98765-4321</option>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Outro Contato</a>
-        <select class="select">
-          <option>FULANO</option>
-          <option>CICLANO</option>
-        </select>
-    </div>
-    <div class="container">
-        <a class="container__text">Telefone</a>
-        <select class="select">
-          <option>(12) 98765-4321</option>
-          <option>(12) 98765-4321</option>
-        </select>
-    </div>
-  </div>
 </body>
 </html>

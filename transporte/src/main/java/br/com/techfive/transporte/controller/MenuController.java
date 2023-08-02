@@ -9,13 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MenuController {
 
     @GetMapping
-    public String menu(){
+    public String menuPrincipal(){
         return "menu/menuPrincipal";
     }
 
     @GetMapping("/cadastro")
     public String menuCadastro(){
         return "menu/menuCadastrar";
+    }
+
+    @GetMapping("/consultas")
+    public String menuConsulta(){
+        return "consulta/consulta";
     }
 
 }

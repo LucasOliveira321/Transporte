@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}">
+<head>
+    <title>Consulta</title>
+</head>
+<body>
+    <div layout:fragment="conteudo">
+        <h1 class="title">CONSULTAS</h1>
+        <hr>
+        <div class="alinhamento">
+            <div class="column">
+                <img th:src="@{/css/image/cracha.png}" alt="Consulta Motorista" class="img"/>
+                <a href="#" type="button" class="button">Motorista</a>
+            </div>
+            <div class="column">
+                <img th:src="@{/css/image/empresa.png}" alt="Consulta Empresa" class="img"/>
+                <a href="#" type="button" class="button">Empresa</a>
+            </div>
+        </div>
+        <div class="alinhamento">
+            <div class="column">
+                <img th:src="@{/css/image/registro_frota.png}" alt="Consulta Frota" class="img"/>
+                <a href="#" type="button" class="button">Frota</a>
+            </div>
+            <div class="column">
+                <img th:src="@{/css/image/transportadora.png}" alt="Consulta Transportadora" class="img"/>
+                <a href="#" type="button" class="button">Transportadora</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
