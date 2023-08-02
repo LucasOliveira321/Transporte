@@ -39,6 +39,48 @@ input{
     text-align: center;
 }
 
+/* TABELA */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+th {
+  background-color: var(--azul-escuro);
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--cinza-claro);
+}
+
+tbody tr {
+  background-color: var(--azul-claro);
+}
+
+td a {
+    text-decoration: underline;
+    margin: 0 20px;
+    padding-top: 15px;
+}
+
+td > form {
+    display: inline;
+}
+
+/* CLASS */
+
 .container{
     display: flex;
     alingn-items: center;

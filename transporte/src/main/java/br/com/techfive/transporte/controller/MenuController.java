@@ -18,9 +18,4 @@ public class MenuController {
         return "menu/menuCadastrar";
     }
 
-    @GetMapping("/consultas")
-    public String menuConsulta(){
-        return "consulta/consulta";
-    }
-
 }

@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Consulta Empresa</title>
 </head>
 <body>
-
+    <div layout:fragment="conteudo">
+        <h1 class="title">EMPRESAS</h1>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>CNPJ</th>
+                    <th>LOGRADOURO</th>
+                    <th>NÚMERO</th>
+                    <th>COMPLEMENTO</th>
+                    <th>BAIRRO</th>
+                    <th>CIDADE</th>
+                    <th>UF</th>
+                    <th>CEP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="empresa : ${consultar}">
+                    <td th:text="${empresa.nome}"></td>
+                    <td th:text="${empresa.cnpj}"></td>
+                    <td th:text="${empresa.logradouro}"></td>
+                    <td th:text="${empresa.numero}"></td>
+                    <td th:text="${empresa.complemento}"></td>
+                    <td th:text="${empresa.bairro}"></td>
+                    <td th:text="${empresa.cidade}"></td>
+                    <td th:text="${empresa.uf}"></td>
+                    <td th:text="${empresa.cep}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

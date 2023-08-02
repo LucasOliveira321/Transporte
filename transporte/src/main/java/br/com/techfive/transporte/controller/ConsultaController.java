@@ -7,20 +7,23 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 @Controller
-@RequestMapping("/solicitacao")
-public class SolicitacaoController {
+@RequestMapping("/consulta")
+public class ConsultaController {
 
     @Autowired
     private EmpresaRepository empresaRepository;
 
-    @GetMapping("/coleta")
-    public String solicitacaoTransporte(Model model){
+    @GetMapping
+    public String menuConsulta(){
+        return "consulta/consulta";
+    }
 
-        model.addAttribute("lista", empresaRepository.findAll());
+    @GetMapping("/empresa")
+    public String consultaEmpresa(Model model){
+        model.addAttribute("consultar", empresaRepository.findAll());
 
-        return "solicitacao/solicitacaoTransporte";
+        return "consulta/consultaEmpresa";
     }
 
 }
