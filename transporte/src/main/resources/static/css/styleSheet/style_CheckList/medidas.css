@@ -1,0 +1,16 @@
+.medidas{
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    background-color: rgb(223, 222, 222);
+    align-items: center;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.medidas_text{
+    text-align: left;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    height: 2em;
+    border: 1px solid rgb(14, 14, 14);
+}

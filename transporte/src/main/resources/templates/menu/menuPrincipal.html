@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="../static/css/reset.css" th:href="@{/css/reset.css}">
+  <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+  <div >
+    <img th:src="@{/css/image/logo.png}" alt="Techfive">
+    <h1 class="title">MENU</h1>
+  </div>
+  <hr>
+  <div>
+    <nav>
+      <div class="alinhamento">
+        <div class="column">
+          <img th:src="@{/css/image/solicitacao_transporte.png}" alt="Solicitação de Transporte" class="img"/>
+          <a th:href="@{solicitacao/coleta}" type="button" class="button">Solicitação de Transporte</a>
+        </div>
+        <div class="column">
+          <img th:src="@{/css/image/checklist.png}" alt="Check List" class="img"/>
+          <a href="#" type="button" class="button">Check List</a>
+        </div>
+        <div class="column">
+          <img th:src="@{/css/image/solicitacao_manutencao.png}" alt="Solicitação de Manutenção" class="img"/>
+          <a href="#" type="button" class="button">Solicitação de Manutenção</a>
+        </div>
+      </div>
+      <div class="alinhamento">
+        <div class="column">
+          <img th:src="@{/css/image/apont_horas.png}" alt="Apontamento de Horas" class="img"/>
+          <a href="#" type="button" class="button">Apontamento de Horas</a>
+        </div>
+        <div class="column">
+          <img th:src="@{/css/image/lupa.png}" alt="Consulta" class="img"/>
+          <a href="#" type="button" class="button">Consulta</a>
+        </div>
+        <div class="column">
+          <img th:src="@{/css/image/cadastrar.png}" alt="Registro da Frota" class="img"/>
+          <a th:href="@{/menu/cadastro}" type="button" class="button">Cadastro</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>

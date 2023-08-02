@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root{
+    --font-principal: 'Inter', sans-serif;
+    --azul-escuro: #154580;
+    --azul-medio: #3970BE;
+    --azul-claro: #E5F1FF;
+    --cinza-texto: #444444;
+    --cinza-claro: #ECECEC;
+}
+
+body{
+    background-image: linear-gradient(to bottom right,white,#c6eded,#22cfcf,#085f5f);
+    margin: 10px;
+    font-family: var(--font-principal);
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+label{
+    color: var(--cinza-texto);
+    width: 10em;
+    height: 1.8em;
+    margin: 1em;
+    text-align: left;
+}
+
+input{
+    width: 15em;
+    height: 1.8em;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    alingn-items: center;
+}
+
+.container__text{
+    width: 11.9em;
+    padding: 1em;
+    margin-left: 20em;
+}
+
+.title{
+    font-size: 22px;
+    color: var(--azul-escuro);
+    font-weight: 700;
+    text-align: center;
+    margin: 1em;
+    text-transform: uppercase;
+}
+
+.select{
+    color: var(--cinza-texto);
+    border-radius: 3px;
+    width: 15em;
+    height: 2em;
+    text-alingn: center;
+    padding: 1em;
+    margin: 1em 2em;
+}
+
+.button{
+    background: var(--azul-escuro);
+    color: var(--cinza-claro);
+    border-radius: 30px;
+    width: 14em;
+    height: 1.2em;
+    text-alingn: center;
+    text-decoration: none;
+    padding: 1em;
+    margin: 1em 2em;
+}
+
+.button__form{
+    background: var(--azul-escuro);
+    color: var(--cinza-claro);
+    border-radius: 15px;
+    width: 10em;
+    height: 2em;
+    text-alingn: center;
+    text-decoration: none;
+}
+
+.alinhamento{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.img{
+    width: 8em;
+    height: 8em;
+    margin: 1em 5.5em;
+}

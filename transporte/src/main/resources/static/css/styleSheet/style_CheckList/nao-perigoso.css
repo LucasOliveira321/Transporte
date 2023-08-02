@@ -1,0 +1,35 @@
+.subtitle{
+    font-size: 16px;
+    margin: 0.5em;
+}
+
+.section_three{
+    display:block;
+    background-color: rgb(223, 222, 222);
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+}
+
+.topicos{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.15fr;
+    background-color: rgb(223, 222, 222);
+    align-items: center;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.topico_text{
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.15fr;
+    padding: 1em;
+    border: 1px solid rgb(14, 14, 14);
+}
+
+.topico_box{
+    height: 30px;
+    width: 55px;
+}

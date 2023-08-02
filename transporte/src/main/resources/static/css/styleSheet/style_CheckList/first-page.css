@@ -1,0 +1,53 @@
+.box{
+    width: 8em;
+    height: 2em;
+    border-radius: 2px;
+    margin-top: 0.5em;
+}
+
+.section_one{
+    display: flex;
+    background-color: rgb(223, 222, 222);
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    margin: 2em 1em;
+    padding: 1em;
+}
+
+.section_two{
+    display:block;
+    background-color: rgb(223, 222, 222);
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    margin: 2em 1em;
+    padding: 1em 0;
+}
+
+.section_two_text{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0.5em;
+}
+
+.section_two_text_checkbox{
+    text-align: center;
+}
+
+.legend{
+    display: block;
+}
+
+.button{
+    text-align: center;
+}
+
+.button_decoration{
+    background-color: rgb(22, 9, 170);
+    color: white;
+    padding: 1em 2.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+}

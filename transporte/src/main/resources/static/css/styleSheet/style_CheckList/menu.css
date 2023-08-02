@@ -1,0 +1,6 @@
+.button_menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2em 1em;
+    text-align: center;
+}
