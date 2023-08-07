@@ -22,19 +22,23 @@
                     <th>CIDADE</th>
                     <th>UF</th>
                     <th>CEP</th>
+                    <th>RESPONSÁVEL</th>
+                    <th>CONTATO</th>
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="empresa : ${consultar}">
                     <td th:text="${empresa.nome}"></td>
                     <td th:text="${empresa.cnpj}"></td>
-                    <td th:text="${empresa.logradouro}"></td>
-                    <td th:text="${empresa.numero}"></td>
-                    <td th:text="${empresa.complemento}"></td>
-                    <td th:text="${empresa.bairro}"></td>
-                    <td th:text="${empresa.cidade}"></td>
-                    <td th:text="${empresa.uf}"></td>
-                    <td th:text="${empresa.cep}"></td>
+                    <td th:text="${empresa.endereco.logradouro}"></td>
+                    <td th:text="${empresa.endereco.numero}"></td>
+                    <td th:text="${empresa.endereco.complemento}"></td>
+                    <td th:text="${empresa.endereco.bairro}"></td>
+                    <td th:text="${empresa.endereco.cidade}"></td>
+                    <td th:text="${empresa.endereco.uf}"></td>
+                    <td th:text="${empresa.endereco.cep}"></td>
+                    <td th:text="${empresa.responsavel.nomeResponsavel}"></td>
+                    <td th:text="${empresa.responsavel.telefone}"></td>
                 </tr>
             </tbody>
         </table>

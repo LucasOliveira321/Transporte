@@ -21,5 +21,9 @@ public record DadosCadastraEmpresa(
         @NotBlank
         String uf,
         @NotBlank
-        String cep
+        String cep,
+        @NotBlank
+        String nomeResponsavel,
+        @NotBlank
+        String telefone
 ) {}

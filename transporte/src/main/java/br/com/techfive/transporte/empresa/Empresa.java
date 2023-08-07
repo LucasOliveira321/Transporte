@@ -1,6 +1,7 @@
 package br.com.techfive.transporte.empresa;
 
-
+import br.com.techfive.transporte.endereco.Endereco;
+import br.com.techfive.transporte.responsavel.Responsavel;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,24 +17,25 @@ public class Empresa {
     private Integer id;
     private String nome;
     private String cnpj;
-    private String logradouro;
-    private String numero;
-    private String complemento;
-    private String bairro;
-    private String cidade;
-    private String uf;
-    private String cep;
+    @Embedded
+    private Endereco endereco;
+    @Embedded
+    private Responsavel responsavel;
 
     public Empresa(DadosCadastraEmpresa dados){
         this.nome = dados.nome();
         this.cnpj = dados.cnpj();
-        this.logradouro = dados.logradouro();
-        this.numero = dados.numero();
-        this.complemento = dados.complemento();
-        this.bairro = dados.bairro();
-        this.cidade = dados.cidade();
-        this.uf = dados.uf();
-        this.cep = dados.cep();
+        this.endereco = new Endereco(
+                dados.logradouro(),
+                dados.numero(),
+                dados.complemento(),
+                dados.bairro(),
+                dados.cidade(),
+                dados.uf(),
+                dados.cep());
+        this.responsavel = new Responsavel(
+                dados.nomeResponsavel(),
+                dados.telefone());
     }
 
     @Override
@@ -42,13 +44,13 @@ public class Empresa {
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", cnpj='" + cnpj + '\'' +
-                ", logradouro='" + logradouro + '\'' +
-                ", numero='" + numero + '\'' +
-                ", complemento='" + complemento + '\'' +
-                ", bairro='" + bairro + '\'' +
-                ", cidade='" + cidade + '\'' +
-                ", uf='" + uf + '\'' +
-                ", cep='" + cep + '\'' +
+                ", logradouro='" + endereco.getLogradouro() + '\'' +
+                ", numero='" + endereco.getNumero() + '\'' +
+                ", complemento='" + endereco.getComplemento() + '\'' +
+                ", bairro='" + endereco.getBairro() + '\'' +
+                ", cidade='" + endereco.getCidade() + '\'' +
+                ", uf='" + endereco.getUf() + '\'' +
+                ", cep='" + endereco.getCep() + '\'' +
                 '}';
     }
 }
