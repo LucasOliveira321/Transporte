@@ -19,9 +19,7 @@ body{
 }
 
 form{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    display: block;
 }
 
 label{
@@ -82,7 +80,7 @@ td > form {
 /* CLASS */
 
 .container{
-    display: flex;
+    margin: 1em 30%;
     alingn-items: center;
 }
 
@@ -102,13 +100,10 @@ td > form {
 }
 
 .select{
-    color: var(--azul-escuro);
-    border-radius: 3px;
     width: 15em;
-    height: 2em;
-    text-alingn: center;
-    padding: 1em;
-    margin: 1em 2em;
+    height: 1.8em;
+    border-radius: 3px;
+    text-align: left;
 }
 
 .button{

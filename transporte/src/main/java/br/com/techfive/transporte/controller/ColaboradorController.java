@@ -1,11 +1,11 @@
 package br.com.techfive.transporte.controller;
 
-import br.com.techfive.transporte.usuario.DadosUsuario;
+import br.com.techfive.transporte.usuario.DadosCadastroUsuario;
 import br.com.techfive.transporte.usuario.Usuario;
 import br.com.techfive.transporte.usuario.UsuarioRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,16 +17,19 @@ public class ColaboradorController {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    @GetMapping("/cadastrar")
+    @GetMapping
     public String formulario(){
         return "cadastra/formulario_colaborador";
     }
 
-    @PostMapping("/cadastrar")
-    public String cadastrar(DadosUsuario dados){
-        Usuario user = new Usuario(dados);
-        usuarioRepository.save(user);
-
+    @PostMapping
+    public String cadastrar(@Valid DadosCadastroUsuario dados){
+        if (dados.senha().equals(dados.repetirSenha())) {
+            Usuario user = new Usuario(dados);
+            usuarioRepository.save(user);
+        }else {
+            System.out.println("Senha errada");
+        }
         return "cadastra/formulario_colaborador";
     }
 

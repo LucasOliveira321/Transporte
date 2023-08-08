@@ -16,11 +16,12 @@ public class Usuario {
     private String email;
     private String senha;
     private String nome;
-//    private Cargo cargo;
+    private String cargo;
 
-    public Usuario(@Valid DadosUsuario dados){
+    public Usuario(@Valid DadosCadastroUsuario dados){
         this.email = dados.email();
         this.senha = dados.senha();
         this.nome = dados.nome();
+        this.cargo = dados.cargo().toString();
     }
 }

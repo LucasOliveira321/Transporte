@@ -20,12 +20,20 @@
                 <input id="senha" name="senha" type="password" class="container__input">
             </div>
             <div class="alinhamento">
-                <label for="senha_repetir" class="container__label">Repetir Senha</label>
-                <input id="senha_repetir" name="senha_repetir" type="password" class="container__input">
+                <label for="repetirSenha" class="container__label">Repetir Senha</label>
+                <input id="repetirSenha" name="repetirSenha" type="password" class="container__input">
             </div>
             <div class="alinhamento">
                 <label for="nome" class="container__label">Nome</label>
                 <input id="nome" name="nome" type="text" class="container__input">
+            </div>
+            <div class="alinhamento">
+                <label for="cargo" class="container__label">Cargo</label>
+                <select id="cargo" name="cargo" class="select">
+                    <option value="0">Selecionar cargo</option>
+                    <option th:value="ADMINISTRADOR" th:text="Administrador"></option>
+                    <option th:value="MOTORISTA" th:text="Motorista"></option>
+                </select>
             </div>
             <div class="alinhamento">
                 <input type="submit" value="Cadastrar" class="button__form">

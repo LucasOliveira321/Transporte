@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}">
+<head>
+  <title>Formulario Caminhao</title>
+</head>
+<body>
+  <div layout:fragment="conteudo">
+    <h1 class="title">Cadastro de Caminhão</h1>
+    <hr>
+    <form method="post">
+      <div class="container">
+        <label for="apelido" class="container__label">*Apelido</label>
+        <input id="apelido" name="apelido" type="text" class="container__input">
+      </div>
+      <div class="container">
+        <label for="modelo" class="container__label">*Modelo</label>
+        <input id="modelo" name="modelo" type="text" class="container__input">
+      </div>
+
+      <div class="container">
+        <label for="placa" class="container__label">*Placa</label>
+        <input id="placa" name="placa" type="text" class="container__input">
+      </div>
+      <div class="container">
+        <label for="renavam" class="container__label">*Renavam</label>
+        <input id="renavam" name="renavam" type="text" class="container__input">
+      </div>
+      <div class="container">
+        <label for="exercicio" class="container__label">*Exercicio</label>
+        <input id="exercicio" name="exercicio" type="text" class="container__input">
+      </div>
+      <div class="container">
+        <label for="carroceria" class="container__label">*Carroceria</label>
+        <input id="carroceria" name="carroceria" type="text" class="container__input">
+      </div>
+      <div class="container">
+        <label for="goodCard" class="container__label">GoodCard</label>
+        <input id="goodCard" name="goodCard" type="text" placeholder="Número do cartão" class="container__input">
+      </div>
+      <div class="container">
+        <label for="senhaCartao" class="container__label">Senha do Cartao</label>
+        <input id="senhaCartao" name="senhaCartao" type="text" class="container__input">
+      </div>
+      <div class="container">
+        <label for="chassis" class="container__label">*Chassis</label>
+        <input id="chassis" name="chassis" type="text" class="container__input">
+      </div>
+      <div class="container">
+        <label for="anoFabricacao" class="container__label">*Ano de Fabricacao</label>
+        <input id="anoFabricacao" name="anoFabricacao" type="date" class="container__input">
+      </div>
+      <div class="container">
+        <label for="tara" class="container__label">*Tara</label>
+        <input id="tara" name="tara" type="number" class="container__input">
+      </div>
+      <div class="container">
+        <label for="cargaMaxima" class="container__label">*Carga Máxima</label>
+        <input id="cargaMaxima" name="cargaMaxima" type="number" class="container__input">
+      </div>
+      <div class="container">
+        <label for="pesoTotal" class="container__label">*Peso Total</label>
+        <input id="pesoTotal" name="pesoTotal" type="number" class="container__input">
+      </div>
+      <div class="container">
+        <label for="alturaMetro" class="container__label">Altura em Metros</label>
+        <input id="alturaMetro" name="alturaMetro" type="number" class="container__input">
+      </div>
+      <div class="container">
+        <label for="larguraMetro" class="container__label">Largura em Metros</label>
+        <input id="larguraMetro" name="larguraMetro" type="number" class="container__input">
+      </div>
+      <div class="container">
+        <label for="comprimentoMetro" class="container__label">Comprimento em Metros</label>
+        <input id="comprimentoMetro" name="comprimentoMetro" type="number" class="container__input">
+      </div>
+      <div class="container">
+        <label for="metroCubico" class="container__label">Metros Cúbicos</label>
+        <input id="metroCubico" name="metroCubico" type="number" class="container__input">
+      </div>
+      <div class="container">
+        <label for="quantidadePneus" class="container__label">*Quantidade de Pneus</label>
+        <input id="quantidadePneus" name="quantidadePneus" type="number" class="container__input">
+      </div>
+      <div class="container">
+        <label for="modeloPneus" class="container__label">Modelo de Pneus</label>
+        <input id="modeloPneus" name="modeloPneus" type="text" class="container__input">
+      </div>
+      <div class="container">
+        <label for="vencimentoLicenciamento" class="container__label">Vencimento do Licenciamento</label>
+        <input id="vencimentoLicenciamento" name="vencimentoLicenciamento" type="date" class="container__input">
+      </div>
+      <div class="container">
+        <label for="vencimentoCronotacografo" class="container__label">Vencimento Cronotacografo</label>
+        <input id="vencimentoCronotacografo" name="vencimentoCronotacografo" type="date" class="container__input">
+      </div>
+      <div class="container">
+        <label for="vencimentoLaudoOpacidade" class="container__label">Vencimento do Laudo de Opacidade</label>
+        <input id="vencimentoLaudoOpacidade" name="vencimentoLaudoOpacidade" type="date" class="container__input">
+      </div>
+      <div class="container">
+        <label for="vencimentoAutorizacaoTransporteResiduoPerigoso" class="container__label">Vencimento de Autorizacao de Transporte de Residuos Perigosos</label>
+        <input id="vencimentoAutorizacaoTransporteResiduoPerigoso" name="vencimentoAutorizacaoTransporteResiduoPerigoso" type="date" class="container__input">
+      </div>
+      <div class="container">
+        <label for="vencimentoUnybrasil" class="container__label">Vencimento de Autorizacao de Transporte de Residuos Perigosos</label>
+        <input id="vencimentoUnybrasil" name="vencimentoUnybrasil" type="date" class="container__input">
+      </div>
+      <div class="container">
+        <input type="submit" value="Cadastrar" class="button__form">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
