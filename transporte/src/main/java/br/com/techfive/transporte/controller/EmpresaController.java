@@ -17,7 +17,6 @@ public class EmpresaController {
     @Autowired
     private EmpresaRepository empresaRepository;
 
-
     @GetMapping
     public String formulario(){
         return "cadastra/formulario_empresa";
@@ -27,7 +26,6 @@ public class EmpresaController {
     public String cadastrar(@Valid DadosCadastraEmpresa dados){
         Empresa empresa = new Empresa(dados);
         empresaRepository.save(empresa);
-
 
         return "cadastra/formulario_empresa";
     }
